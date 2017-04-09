@@ -3,18 +3,77 @@
 <html>
   <head>
     <title>Message Writer</title>
+<style>
+.contentbox{
+width: 98%;
+height: 100%;
+}
+.sendbutton{
+width:100px;
+height: 30px;
+border: 1px solid green;
+background-color: lightgreen;
+position:absolute;
+right: 25px;
+bottom: 10px;
+border-radius: 10px;
+}
+.filename{
+width: 100%;
+height: 40px;
+position: absolute;
+background-color:white;
+left: 0px;
+top: 0px;
+}
+.subject{
+background-color: lightblue;
+position:absolute;
+top: 40px;
+left: 0px;
+width: 100%;
+height: 40px;
+}
+.descript{
+position:absolute;
+top:80px;
+left: 0px;
+background-color: lightblue;
+width: 100%;
+height: 40px;
+}
+.content{
+position:absolute;
+top:120px;
+left: 0px;
+background-color: lightgreen;
+width: 100%;
+}
+body{
+background-color: lightgrey;
+}
+</style>
   </head>
   <body>
-File Name: <input type="text" value="Message" id="flnam"></input>
-<hr>
-Title: <input type="text" id="titlebox"></input><p>
-Description: <input type="text" id="descript"></input> Optional<br>
-<hr>
-Content: <input type="text" id="contentbox"></input><br><br>
-<button onclick="Buttin()">Go!</button>
+<div class="filename">File name: <input type="text" value="message" id="flnam"></input></div>
+<div class="subject">Subject: <input type="text" id="titlebox"></input></div>
+<div class="descript">Description: <input type="text" id="descript"></input> Optional</div>
+<div class="content" style="height: 200px;" id="jsres">Content: <div style="height: 0px;width:100%;" id="mrbluesky"><input type="text" id="contentbox" class="contentbox"></input></div></div>
+<button onclick="Buttin()" class="sendbutton">Send</button>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <a id="export" class="myButton" download="name" href="#" style="display:none;">export</a>
 <script>
+var kawaii = window.innerHeight-120
+var moarkawaii = window.innerHeight-200
+document.getElementById('jsres').setAttribute("style","height: " + kawaii + "px;");
+document.getElementById('mrbluesky').setAttribute("style","height: " + moarkawaii + "px;");
+window.addEventListener('resize', function(event){
+var kawaii = window.innerHeight-120
+var moarkawaii = window.innerHeight-200
+document.getElementById('mrbluesky').setAttribute("style","height: " + moarkawaii + "px;");
+document.getElementById('jsres').setAttribute("style","height: " + kawaii + "px;");
+});
+
     function createDownloadLink(anchorSelector, str, fileName){
         if(window.navigator.msSaveOrOpenBlob) {
             var fileData = [str];
@@ -28,7 +87,6 @@ Content: <input type="text" id="contentbox"></input><br><br>
             document.getElementById('export').click();
         }
     }
-
     function Buttin() {
     document.getElementById('export').setAttribute("download",document.getElementById('flnam').value)
 var lel = " "
@@ -199,7 +257,6 @@ if(part === "Z"){
 var letterz = ("bA")
 }
 //Punctuation
-
 if(part === "."){
 var letterz = ("qm")
 }
@@ -287,9 +344,7 @@ var letterz = ("io")
 if(part === "/"){
 var letterz = ("zp")
 }
-
 //Numbers
-
 if(part === "1"){
 var letterz = ("Zc")
 }
@@ -327,7 +382,6 @@ var done = sent.substring(9,sent.length)
 var str = done;
         createDownloadLink("#export",str,"test.txt");
     }
-
 </script>
 </body>
 </html>
