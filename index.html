@@ -1,1 +1,334 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Writer</title>
+  </head>
+  <body>
+File Name: <input type="text" value="Message" id="flnam"></input>
+<hr>
+Title: <input type="text" id="titlebox"></input><p>
+Description: <input type="text" id="descript"></input> Optional<br>
+<hr>
+Content: <input type="text" id="contentbox"></input><br><br>
+<button onclick="Buttin()">Go!</button>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<a id="export" class="myButton" download="name" href="#" style="display:none;">export</a>
+<script>
+    function createDownloadLink(anchorSelector, str, fileName){
+        if(window.navigator.msSaveOrOpenBlob) {
+            var fileData = [str];
+            blobObject = new Blob(fileData);
+            $(anchorSelector).click(function(){
+                window.navigator.msSaveOrOpenBlob(blobObject, fileName);
+            });
+        } else {
+            var url = "data:text/plain;charset=utf-8," + encodeURIComponent(str);
+            $(anchorSelector).attr("href", url);
+            document.getElementById('export').click();
+        }
+    }
+
+    function Buttin() {
+    document.getElementById('export').setAttribute("download",document.getElementById('flnam').value)
+var lel = " "
+var runthroughs = 0
+var run = 0
+var wordlength = 1
+var ch = document.getElementById("titlebox").value + "-" + document.getElementById("descript").value + "-" + document.getElementById("contentbox").value + "-";
+alert(ch)
+var wordlength = ch.length
+while(runthroughs < wordlength){
+var part = ch.substring(runthroughs,runthroughs + 1)
+if(part === "a"){
+var letterz = ("sT")
+}
+if(part === "b"){
+var letterz = ("p2")
+}
+if(part === "c"){
+var letterz = ("9v")
+}
+if(part === "d"){
+var letterz = ("ab")
+}
+if(part === "e"){
+var letterz = ("mN")
+}
+if(part === "f"){
+var letterz = ("Mn")
+}
+if(part === "g"){
+var letterz = ("nM")
+}
+if(part === "h"){
+var letterz = ("Nm")
+}
+if(part === "i"){
+var letterz = ("QQ")
+}
+if(part === "j"){
+var letterz = ("ba")
+}
+if(part === "k"){
+var letterz = ("bB")
+}
+if(part === "l"){
+var letterz = ("Be")
+}
+if(part === "m"){
+var letterz = ("ZZ")
+}
+if(part === "n"){
+var letterz = ("zz")
+}
+if(part === "o"){
+var letterz = ("PP")
+}
+if(part === "p"){
+var letterz = ("mL")
+}
+if(part === "q"){
+var letterz = ("FF")
+}
+if(part === "r"){
+var letterz = ("cc")
+}
+if(part === "s"){
+var letterz = ("Qu")
+}
+if(part === "t"){
+var letterz = ("SP")
+}
+if(part === "u"){
+var letterz = ("AY")
+}
+if(part === "v"){
+var letterz = ("SL")
+}
+if(part === "w"){
+var letterz = ("PL")
+}
+if(part === "x"){
+var letterz = ("LS")
+}
+if(part === "y"){
+var letterz = ("UU")
+}
+if(part === "z"){
+var letterz = ("PU")
+}
+if(part === " "){
+var letterz = ("qQ")
+}
+if(part === "A"){
+var letterz = ("CQ")
+}
+if(part === "B"){
+var letterz = ("CW")
+}
+if(part === "C"){
+var letterz = ("CE")
+}
+if(part === "D"){
+var letterz = ("CR")
+}
+if(part === "E"){
+var letterz = ("CT")
+}
+if(part === "F"){
+var letterz = ("CY")
+}
+if(part === "G"){
+var letterz = ("CU")
+}
+if(part === "H"){
+var letterz = ("wH")
+}
+if(part === "I"){
+var letterz = ("CI")
+}
+if(part === "J"){
+var letterz = ("Ci")
+}
+if(part === "K"){
+var letterz = ("Co")
+}
+if(part === "L"){
+var letterz = ("cO")
+}
+if(part === "M"){
+var letterz = ("0c")
+}
+if(part === "N"){
+var letterz = ("c0")
+}
+if(part === "O"){
+var letterz = ("cv")
+}
+if(part === "P"){
+var letterz = ("Vc")
+}
+if(part === "Q"){
+var letterz = ("Ec")
+}
+if(part === "R"){
+var letterz = ("QM")
+}
+if(part === "S"){
+var letterz = ("mQ")
+}
+if(part === "T"){
+var letterz = ("br")
+}
+if(part === "U"){
+var letterz = ("rb")
+}
+if(part === "V"){
+var letterz = ("Ks")
+}
+if(part === "W"){
+var letterz = ("sK")
+}
+if(part === "X"){
+var letterz = ("Kw")
+}
+if(part === "Y"){
+var letterz = ("wK")
+}
+if(part === "Z"){
+var letterz = ("bA")
+}
+//Punctuation
+
+if(part === "."){
+var letterz = ("qm")
+}
+if(part === "?"){
+var letterz = ("QK")
+}
+if(part === ","){
+var letterz = ("Qp")
+}
+if(part === "<"){
+var letterz = (" mq")
+}
+if(part === ">"){
+var letterz = (" Wy")
+}
+if(part === ":"){
+var letterz = ("yW")
+}
+if(part === ";"){
+var letterz = ("sU")
+}
+if(part === "'"){
+var letterz = ("wZ")
+}
+if(part === "["){
+var letterz = ("qS")
+}
+if(part === "]"){
+var letterz = ("nE")
+}
+if(part === "{"){
+var letterz = ("iO")
+}
+if(part === "}"){
+var letterz = ("Oi")
+}
+if(part === "|"){
+var letterz = ("QB")
+}
+if(part === "!"){
+var letterz = ("se")
+}
+if(part === "@"){
+var letterz = ("su")
+}
+if(part === "#"){
+var letterz = ("sM")
+}
+if(part === "$"){
+var letterz = ("SC")
+}
+if(part === "%"){
+var letterz = ("qn")
+}
+if(part === "^"){
+var letterz = ("Eq")
+}
+if(part === "*"){
+var letterz = ("Da")
+}
+if(part === "("){
+var letterz = ("cq")
+}
+if(part === ")"){
+var letterz = ("Qd")
+}
+if(part === "-"){
+var letterz = ("uE")
+}
+if(part === "_"){
+var letterz = ("pN")
+}
+if(part === "+"){
+var letterz = ("Aq")
+}
+if(part === "="){
+var letterz = ("Q0")
+}
+if(part === "~"){
+var letterz = ("IO")
+}
+if(part === "`"){
+var letterz = ("io")
+}
+if(part === "/"){
+var letterz = ("zp")
+}
+
+//Numbers
+
+if(part === "1"){
+var letterz = ("Zc")
+}
+if(part === "2"){
+var letterz = ("Ac")
+}
+if(part === "3"){
+var letterz = ("eD")
+}
+if(part === "4"){
+var letterz = ("s6")
+}
+if(part === "5"){
+var letterz = ("Ps")
+}
+if(part === "6"){
+var letterz = ("sp")
+}
+if(part === "7"){
+var letterz = ("ps")
+}
+if(part === "8"){
+var letterz = ("zs")
+}
+if(part === "9"){
+var letterz = ("yu")
+}
+if(part === "0"){
+var letterz = ("pO")
+}
+var sent = sent + letterz
+var runthroughs = (runthroughs + 1)
+}
+var done = sent.substring(9,sent.length)
+var str = done;
+        createDownloadLink("#export",str,"test.txt");
+    }
+
+</script>
+</body>
+</html>
